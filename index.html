@@ -1,16 +1,89 @@
+<!DOCTYPE html>
 <html>
     <head>
-    <script src="script.js"></script>
-    <link rel="stylesheet" href="style.css">
+        <script src="script.js"></script>
+        <link rel="stylesheet" href="style.css">
+        <title>Any relevant title you want to give</title>
     </head>
     <body>
-        <h1>Simple Interest Calculator</h1>
+        <div class="maindiv">
+            <h1>Simple Interest Calculator</h1>
+            <form>
+                <div class="row">
+                    <div class="col25">
+                        <label>Amount</label>
+                    </div>
+                    <div class="col75">
+                         <input type="number"  id="principal"> 
+                    </div>  
+                </div>
+                 
+                <div  class="row">
+                    <div class="col25">
+                        <label>Interest Rate :</label>
+                    </div>
+                    <div class="col75">
+                        <input type="range"  onchange="updateRate()" id="rate" min="1" max="20" value="10.25">
+                        <span id="rate_val">
+                            10.25
+                        </span>
+                    </div>   
+                </div>
+               
+                <div  class="row">
+                    <div class="col25">
+                        <label>No. of Years</label>
+                    </div>
+                    <div class="col75">
+                        <select id="years">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                            <!-- fill in the rest of the values-->
+                        </select>
+                        
+                    </div>
+                   
+                   
+                </div>
+               
+                <div  class="row">
+                    <div class="col25">
+                        <button type="button" onclick="compute()">Compute Interest</button> 
+                    </div>
 
-        Amount <input type="number"  id="principal">  <br/>
-        Rate <input type="number"  id="rate">  <br/>
-        No. of Years <input type="number"  id="years">  <br/>
-        Interest : <span id="result"></span><br>
+                   
+                </div>
 
-        <button onclick="compute()">Compute</button>
+               
+                <span id="result" class="result">
+                    <div id="result1" class="result1"></div>
+                    <div id="result2" class="result2"></div>
+                    <div id="result3" class="result3"></div>
+                    <div id="result4" class="result4"></div>
+                    
+                </span>
+
+            </form>
+            
+            <footer>
+
+                &#169; This Calculator belongs to Péter Miklós.
+        
+        
+            </footer>
+
+
+        </div>
+
+
+
     </body>
 </html>
